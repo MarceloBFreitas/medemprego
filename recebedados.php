@@ -16,9 +16,7 @@
     $cepcliente = $_POST['cep'];
     $idsessao = $_POST['idsessao'];
 
-    $token = urlencode("marcelofreitas21@hotmail.com"); //MARCELO
-    $email= "CE77E947F35D460BB5B096A1AB704602";
-    $url = "https://ws.pagseguro.uol.com.br/pre-approvals?email=marcelofreitas21%40hotmail.com&token=CE77E947F35D460BB5B096A1AB704602";  //PRODUCAO
+    $url = "https://ws.pagseguro.uol.com.br/pre-approvals?email=email%40hotmail.com&token=CE77E947F35D454354354396A1AB704602";  //PRODUCAO
 
     $json = "{";
     $json = $json.'"plan":'.'"710FF1953F3F00D99497EFADD5BB8099",';
@@ -91,6 +89,4 @@
 
     curl_close($curl);
 
-    echo $res;
-
-    //var_dump($json);
+    echo json_encode($res);
